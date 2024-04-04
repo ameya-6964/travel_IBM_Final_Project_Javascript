@@ -1,0 +1,195 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #333; /* Dark background color */
+  padding: 20px; /* Add padding to make it visually more appealing */
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  margin-right: 20px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.search-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.search-container button:nth-child(2) {
+  background-color: #ccc;
+  margin-left: 10px;
+}
+
+.homepage {
+  background-image: url("https://images.unsplash.com/photo-1518563077661-23ad56581d77?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Path to your background image */
+  background-size: cover; /* Cover the entire element */
+  background-position: center; /* Center the background image */
+  height: 100vh; /* Set height to fill the viewport */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.content {
+  text-align: start;
+  color: #f0f0f0; /* Text color */
+  width: 40%;
+  margin-bottom: 3rem;
+}
+
+.content h1 {
+  font-size: 3rem; /* Adjust as needed */
+  margin-bottom: 20px; /* Add space between elements */
+}
+
+.content h2 {
+  font-size: 1.5rem; /* Adjust as needed */
+  margin-bottom: 30px; /* Add space between elements */
+}
+
+.content button {
+  padding: 10px 20px;
+  font-size: 1.2rem; /* Adjust as needed */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff; /* Button background color */
+  color: #333; /* Button text color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.content button:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Lighten the background color on hover */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff; /* Text color */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 150px; /* Set a fixed height for textarea */
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff; /* Button background color */
+  color: #333; /* Button text color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button[type="submit"]:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Lighten the background color on hover */
+}
+
+.search-results {
+  position: absolute;
+  max-height: 80vh;
+  overflow: scroll;
+  top: 51%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.card {
+  width: 400px; /* Set width */
+  height: 300px; /* Set height */
+  border: 1px solid #ccc; /* Add border for visual clarity */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+  margin-bottom: 1rem;
+}
+
+.card img {
+  width: 400px; /* Make the image fill the card width */
+  height: 200px; /* Make the image fill the card height */
+  object-fit: cover; /* Ensure the image covers the entire space */
+}
+
+.card-body {
+  padding: 10px; /* Add padding to the card body */
+}
+
+.card-body h3 {
+  margin-bottom: 10px; /* Add spacing below the heading */
+  color: white;
+}
+
+.card-body p {
+  margin: 0; /* Remove default margin for paragraphs */
+  color: white;
+}
+
+.search-results::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.search-results::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the scrollbar track */
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
