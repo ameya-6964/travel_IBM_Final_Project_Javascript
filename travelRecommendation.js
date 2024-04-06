@@ -2,7 +2,7 @@ let Data;
 
 function resetSearch() {
   document.querySelector(".search-input").value = "";
-  displayResults([]); // Clear displayed results
+  displayResults([]);
 }
 
 function fetchData() {
@@ -10,6 +10,7 @@ function fetchData() {
     .getElementById("searchInput")
     .value.trim()
     .toLowerCase();
+
   if (keyword === "") {
     console.log("Please enter a valid search keyword.");
     return;
@@ -27,22 +28,21 @@ function fetchData() {
       filterResults(keyword);
     })
     .catch((error) => {
-      console.error("There Was Problem While Fethching The Data", error);
+      console.error("There was a problem while fetching the data", error);
     });
 }
 
 function displayResults(results) {
-  console.log(results);
   const cardsContainer = document.getElementById("displayData");
-  cardsContainer.innerHTML = ""; // Clear previous results
+  cardsContainer.innerHTML = "";
 
   results.forEach((city) => {
     const card = `
-        <div class="card">
-            <img src="${city.imageUrl}" alt="${city.name}">
-            <h3>${city.name}</h3>
-            <p>${city.description}</p>
-        </div>
+      <div class="card">
+        <img src="${city.imageUrl}" alt="${city.name}">
+        <h3>${city.name}</h3>
+        <p>${city.description}</p>
+      </div>
     `;
     cardsContainer.innerHTML += card;
   });
@@ -50,6 +50,7 @@ function displayResults(results) {
 
 function filterResults(keyword) {
   const filteredCities = [];
+
   Data.countries.forEach((country) => {
     country.cities.forEach((city) => {
       if (
@@ -66,11 +67,12 @@ function filterResults(keyword) {
       filteredCities.push(temple);
     });
   }
+
   if (keyword.toLowerCase().includes("beach")) {
     Data.beaches.forEach((beach) => {
       filteredCities.push(beach);
     });
   }
-  console.log(filteredCities);
+
   displayResults(filteredCities);
 }
